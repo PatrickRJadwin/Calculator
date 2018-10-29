@@ -11,6 +11,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -232,10 +233,17 @@ namespace Jadwin_Lab4
         private void back_Click(object sender, EventArgs e)
         {
             string field = calcTextBox.Text;
+            char period = '.';
             //Check if field is empty
             if (!string.IsNullOrEmpty(field))
             {
+                if (field[field.Length - 1] == period)
+                {
+                    decCount = false;
+                }
+
                 field = field.Substring(0, field.Length - 1);
+                
                 calcTextBox.Text = field;
             }
             else
