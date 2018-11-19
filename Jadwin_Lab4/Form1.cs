@@ -1,6 +1,6 @@
 ﻿/* * * * * * * * * * * * *
  * Name: Patrick Jadwin  *
- * Date: 10-26-2018      *
+ * Date: 11-19-2018      *
  * Class: CITC 2375      *
  * * * * * * * * * * * * */
 
@@ -28,7 +28,7 @@ namespace Jadwin_Lab4
         public bool decCount = false;
 
         // Init class
-        Calculator calc = new Calculator();
+        MemoryCalculator calc = new MemoryCalculator();
 
         public CalcForm()
         {
@@ -248,6 +248,46 @@ namespace Jadwin_Lab4
             else
             {
                 MessageBox.Show("Nothing to delete", "Null Field");
+            }
+        }
+
+        // Clear memory action
+        private void memClr_Click(object sender, EventArgs e)
+        {
+            calc.MemoryClear(mem);
+        }
+
+        // Recall memory action
+        private void memRecall_Click(object sender, EventArgs e)
+        {
+            calc.MemoryRecall(calcTextBox);
+        }
+
+        // Store memory action
+        private void memSave_Click(object sender, EventArgs e)
+        {
+            decimal num = 0;
+            if (decimal.TryParse(calcTextBox.Text, out num))
+            {
+                calc.MemoryStore(num, mem);
+            }
+            else
+            {
+                MessageBox.Show("You need to enter a number", "No Number Found");
+            }
+        }
+
+        // Add display val to memory
+        private void memAdd_Click(object sender, EventArgs e)
+        {
+            decimal num = 0;
+            if (decimal.TryParse(calcTextBox.Text, out num))
+            {
+                calc.MemoryAdd(num);
+            }
+            else
+            {
+                MessageBox.Show("You need to enter a number", "No Number Found");
             }
         }
     }

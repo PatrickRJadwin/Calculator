@@ -50,11 +50,11 @@
             this.negPos = new System.Windows.Forms.Button();
             this.zero = new System.Windows.Forms.Button();
             this.equal = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.memClr = new System.Windows.Forms.Button();
             this.memRecall = new System.Windows.Forms.Button();
             this.memSave = new System.Windows.Forms.Button();
             this.memAdd = new System.Windows.Forms.Button();
+            this.mem = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // calcTextBox
@@ -303,15 +303,6 @@
             this.equal.UseVisualStyleBackColor = true;
             this.equal.Click += new System.EventHandler(this.equal_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 39);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(45, 32);
-            this.textBox1.TabIndex = 28;
-            // 
             // memClr
             // 
             this.memClr.ForeColor = System.Drawing.Color.Red;
@@ -321,6 +312,7 @@
             this.memClr.TabIndex = 29;
             this.memClr.Text = "MC";
             this.memClr.UseVisualStyleBackColor = true;
+            this.memClr.Click += new System.EventHandler(this.memClr_Click);
             // 
             // memRecall
             // 
@@ -331,6 +323,7 @@
             this.memRecall.TabIndex = 30;
             this.memRecall.Text = "MR";
             this.memRecall.UseVisualStyleBackColor = true;
+            this.memRecall.Click += new System.EventHandler(this.memRecall_Click);
             // 
             // memSave
             // 
@@ -341,6 +334,7 @@
             this.memSave.TabIndex = 31;
             this.memSave.Text = "MS";
             this.memSave.UseVisualStyleBackColor = true;
+            this.memSave.Click += new System.EventHandler(this.memSave_Click);
             // 
             // memAdd
             // 
@@ -351,6 +345,16 @@
             this.memAdd.TabIndex = 32;
             this.memAdd.Text = "M+";
             this.memAdd.UseVisualStyleBackColor = true;
+            this.memAdd.Click += new System.EventHandler(this.memAdd_Click);
+            // 
+            // mem
+            // 
+            this.mem.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.mem.Location = new System.Drawing.Point(12, 39);
+            this.mem.Name = "mem";
+            this.mem.Size = new System.Drawing.Size(45, 32);
+            this.mem.TabIndex = 33;
+            this.mem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CalcForm
             // 
@@ -359,11 +363,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.Clear;
             this.ClientSize = new System.Drawing.Size(273, 241);
+            this.Controls.Add(this.mem);
             this.Controls.Add(this.memAdd);
             this.Controls.Add(this.memSave);
             this.Controls.Add(this.memRecall);
             this.Controls.Add(this.memClr);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.equal);
             this.Controls.Add(this.plus);
             this.Controls.Add(this.dec);
@@ -417,11 +421,11 @@
         private System.Windows.Forms.Button negPos;
         private System.Windows.Forms.Button zero;
         private System.Windows.Forms.Button equal;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button memClr;
         private System.Windows.Forms.Button memRecall;
         private System.Windows.Forms.Button memSave;
         private System.Windows.Forms.Button memAdd;
+        private System.Windows.Forms.Label mem;
     }
 }
 
