@@ -10,6 +10,8 @@ namespace Jadwin_Lab4
     {
         private decimal memoryValue;
 
+        public MemoryCalculator() {}
+
         public decimal MemoryStore(decimal displayValue)
         {
             memoryValue = displayValue;
