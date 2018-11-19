@@ -17,7 +17,7 @@ using System.Windows.Forms;
 
 namespace Jadwin_Lab4
 {
-    public partial class Form1 : Form
+    public partial class CalcForm : Form
     {
         // Operators
         public decimal opr1;
@@ -30,7 +30,7 @@ namespace Jadwin_Lab4
         // Init class
         Calculator calc = new Calculator();
 
-        public Form1()
+        public CalcForm()
         {
             InitializeComponent();
         }
@@ -93,7 +93,6 @@ namespace Jadwin_Lab4
             if (decCount == false)
             {
                 text_Box_Change(".");
-                // 
                 decCount = true;
             }
             else
